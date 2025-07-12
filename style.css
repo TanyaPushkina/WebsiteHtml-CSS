@@ -1,0 +1,153 @@
+/* Пастельный фон */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #FEECE2, #D4E2D4, #DCE3F5);
+    text-align: center;
+    color: #4A4A4A;
+}
+
+/* Заголовок с крутящейся машинкой */
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    color: #6A5D7B; /* Пастельный фиолетовый */
+}
+
+.spinning-car {
+    width: 60px;
+    margin-left: 15px;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li button {
+    background: #A8CABA; /* Пастельный зеленый */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li button:hover {
+    background: #F3B3A6; /* Пастельный розовый */
+    color: #4A4A4A;
+}
+
+/* Контейнер машин */
+.cars-section {
+    display: none;
+    padding: 20px;
+}
+
+/* Карточки машин */
+.car {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    padding: 15px;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    color: #4A4A4A;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Картинка машин */
+.car-image {
+    width: 150px;
+    height: auto;
+    border-radius: 12px;
+    filter: brightness(95%);
+}
+
+/* Кнопки */
+.button {
+    background: #AFCBFF; /* Пастельный голубой */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #F3B3A6; /* Пастельный розовый */
+    color: #4A4A4A;
+}
+
+/* Анимация появления */
+.car1-info {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #F7F7F7;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#add-car {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.car {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 500px;
+    background-color: #f9f9f9;
+}
+
+.car-image {
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px; /* Отступ справа от картинки */
+}
+
+.car-info {
+    flex: 1; /* Чтобы блок с текстом занимал все доступное пространство */
+}
+
+.car-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.car-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}

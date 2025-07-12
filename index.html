@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Машинки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Добро пожаловать! 
+            <img src="car1.jpeg" alt="Крутящаяся машинка" class="spinning-car">
+        </h1>
+        <nav>
+            <ul>
+                <li><button onclick="showSection('old-cars')">Старые машины</button></li>
+                <li><button onclick="showSection('new-cars')">Новые машины</button></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="add-car">
+        <h2>Добавить свою машинку</h2>
+        <input type="text" id="carName" placeholder="Введите название машины">
+        <input type="text" id="carDescription" placeholder="Введите описание">
+        <input type="file" id="carImage" accept="image/*">
+        <button onclick="addCar()">Добавить</button>
+    
+        <h2>Список добавленных машин</h2>
+        <div id="carList"></div>
+    </section>
+    
+    <section id="old-cars" class="cars-section">
+        <h2>Старые машины</h2>
+        <div class="cars">
+            <div class="car">
+                <img src="mustang1.jpeg" alt="Ford Mustang 1967" class="car-image">
+                <div class="car-content">
+                    <h2>Ford Mustang 1967</h2>
+                    <p>Классический американский маслкар.</p>
+                    <button class="button" onclick="toggleInfo('mustang-info')">Подробнее</button>
+                    <div class="car1-info" id="mustang-info">
+                        <p>Ford Mustang 1967 года – одна из самых культовых моделей американского автопрома.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="car">
+                <img src="mercedes1.jpeg" alt="Ford Mustang 1967" class="car-image">
+                <div class="car-content">
+                <h2>Mercedes-Benz 300SL</h2>
+                <p>Знаменитый ретро-спорткар с дверями "крыло чайки".</p>
+                <button class="button" onclick="toggleInfo('300sl-info')">Подробнее</button>
+                <div class="car1-info" id="300sl-info">
+                    <p>Mercedes-Benz 300SL выпускался в 1954-1963 годах и стал иконой автомобильного дизайна.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="new-cars" class="cars-section">
+        <h2>Новые машины</h2>
+        <div class="cars">
+            <div class="car">
+                <img src="bmw.jpeg" alt="Ford Mustang 1967" class="car-image">
+                <div class="car-content">
+                <h2>BMW M4</h2>
+                <p>Современный спортивный автомобиль.</p>
+                <button class="button" onclick="toggleInfo('m4-info')">Подробнее</button>
+                <div class="car1-info" id="m4-info">
+                    <p>BMW M4 – мощный спорткар с турбированным двигателем.</p>
+                </div>
+            </div>
+            </div>
+            <div class="car">
+                <img src="tesla.jpeg" alt="Ford Mustang 1967" class="car-image">
+                <div class="car-content">
+                <h2>Tesla Model S</h2>
+                <p>Электрический седан с потрясающей динамикой.</p>
+                <button class="button" onclick="toggleInfo('tesla-info')">Подробнее</button>
+                <div class="car1-info" id="tesla-info">
+                    <p>Tesla Model S – один из самых быстрых электромобилей в мире.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Мир автомобилей</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
